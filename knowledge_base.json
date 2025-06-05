@@ -1,0 +1,835 @@
+{
+    "id": 1,
+    "organization_id": 1,
+    "created_at": "2025-03-05T05:53:03.450712+00:00",
+    "modified_at": "2025-04-17T07:00:27.502248+00:00",
+    "created_by_id": 77,
+    "modified_by_id": 22770,
+    "name": "Roman Burke",
+    "display_name": "Roman Burke",
+    "contact_email": "",
+    "phone_number": "",
+    "twilio_incoming_number": "",
+    "voice": {
+      "id": "jjNXKT2gAnMnT2HUI4Pv",
+      "name": "Voice jjNXKT2gAnMnT2HUI4Pv",
+      "provider": "elevenlabs",
+      "gender": "neutral",
+      "provider_voice_id": "jjNXKT2gAnMnT2HUI4Pv"
+    },
+    "llm": {
+      "id": 1,
+      "name": "Model 3",
+      "provider": "openai",
+      "model": "3"
+    },
+    "welcome_greeting_note": "Hello! I'm the virtual assistant for Test. How may I help you today? I can assist with appointments, general information, or connect you with our staff.",
+    "knowledge_base": {
+      "practice_info": {
+        "about": "We are a full-service dental practice committed to providing exceptional care in a comfortable environment. Our team of experienced professionals uses state-of-the-art technology to ensure the highest quality of dental care.",
+        "services": [
+          "Pediatric Dentistry",
+          "Preventive Care",
+          "TMJ Treatment",
+          "Oral Surgery",
+          "Orthodontics",
+          "Endodontics",
+          "Cosmetic Dentistry",
+          "Dental Implants",
+          "Sedation Dentistry",
+          "Periodontics",
+          "General Dentistry",
+          "Emergency Dental Care",
+          "Sleep Apnea Treatment"
+        ],
+        "insurance": {
+          "accepted_types": [
+            "PPO",
+            "Medicaid",
+            "Tricare (Military Insurance)",
+            "HMO",
+            "MetLife",
+            "Delta Dental",
+            "Cigna",
+            "United Healthcare",
+            "Medicare",
+            "Guardian",
+            "Aetna",
+            "CHIP (Children's Health Insurance Program)"
+          ],
+          "verification_process": "We verify insurance coverage before appointments and can provide estimated costs. Please have your insurance card ready when scheduling. We'll need the subscriber's name, ID number, and group number.",
+          "common_questions": {
+            "coverage_verification": "We can verify your coverage before treatment",
+            "pre_authorization": "Some procedures may require pre-authorization",
+            "out_of_network": "We may offer out-of-network benefits",
+            "annual_maximums": "We track your insurance usage and benefits",
+            "coordination_of_benefits": "We can help coordinate between multiple insurance plans"
+          }
+        },
+        "payment_options": {
+          "accepted_methods": [
+            "Debit Cards",
+            "Personal Checks",
+            "Credit Cards (Visa, MasterCard, American Express, Discover)",
+            "HSA/FSA Cards",
+            "Cash",
+            "Wells Fargo Health Advantage",
+            "CareCredit",
+            "Insurance",
+            "Payment Plans"
+          ],
+          "financing_options": {
+            "care_credit": {
+              "description": "Special healthcare financing with deferred interest",
+              "application": "Can apply in office or online",
+              "terms": "Various payment terms available from 6-24 months"
+            },
+            "in_house": {
+              "description": "Custom payment plans for qualifying patients",
+              "terms": "Flexible monthly payments",
+              "requirements": "Valid ID and credit check may be required"
+            }
+          }
+        }
+      },
+      "appointment_info": {
+        "types": {
+          "new_patient": {
+            "duration": "90 minutes",
+            "includes": [
+              "Treatment plan discussion",
+              "Cleaning (if time permits)",
+              "Full set of x-rays",
+              "Comprehensive exam"
+            ],
+            "requirements": [
+              "Bring ID and insurance card",
+              "Arrive 15 minutes early",
+              "List of current medications",
+              "Complete medical history form"
+            ]
+          },
+          "routine_cleaning": {
+            "duration": "60 minutes",
+            "frequency": "Every 6 months",
+            "includes": [
+              "Professional cleaning",
+              "Oral cancer screening",
+              "Exam by dentist",
+              "X-rays (if due)"
+            ]
+          },
+          "emergency": {
+            "availability": "Same-day appointments for emergencies",
+            "what_qualifies": [
+              "Severe swelling",
+              "Bleeding that won't stop",
+              "Broken or chipped tooth",
+              "Severe tooth pain",
+              "Dental trauma",
+              "Lost filling or crown"
+            ]
+          }
+        },
+        "scheduling_policy": {
+          "booking_methods": [
+            "Virtual assistant",
+            "Phone",
+            "Mobile app",
+            "Online portal"
+          ],
+          "cancellation_policy": {
+            "notice_required": "24 hours",
+            "fee": "May apply for late cancellations",
+            "exceptions": "Emergency situations considered"
+          },
+          "reminders": {
+            "types": [
+              "Phone call",
+              "Text message",
+              "Email"
+            ],
+            "timing": [
+              "1 week before",
+              "2 days before",
+              "Day of appointment"
+            ]
+          }
+        },
+        "first_visit": {
+          "preparation": [
+            "List of medications",
+            "X-rays (if available from previous dentist)",
+            "Bring insurance card",
+            "Previous dental records (if available)",
+            "Arrive 15 minutes early",
+            "Bring valid ID",
+            "Complete medical history"
+          ],
+          "what_to_expect": [
+            "Review of medical history",
+            "Comprehensive examination",
+            "Financial consultation",
+            "Meeting with dental team",
+            "Treatment plan discussion",
+            "X-rays as needed"
+          ]
+        }
+      },
+      "treatment_info": {
+        "common_procedures": {
+          "cleaning": {
+            "description": "Professional removal of plaque and tartar",
+            "duration": "30-60 minutes",
+            "frequency": "Every 6 months",
+            "preparation": "No special preparation needed"
+          },
+          "fillings": {
+            "description": "Repair of cavities or tooth decay",
+            "duration": "30-60 minutes",
+            "types": [
+              "Composite (tooth-colored)",
+              "Amalgam (silver)"
+            ],
+            "aftercare": [
+              "Wait to eat until numbness subsides",
+              "May experience temporary sensitivity",
+              "Avoid very hot or cold foods"
+            ]
+          },
+          "root_canal": {
+            "description": "Treatment of infected tooth pulp",
+            "duration": "90 minutes to 2 hours",
+            "steps": [
+              "Removal of infected tissue",
+              "Local anesthesia",
+              "Cleaning and sealing",
+              "Crown placement (usually separate visit)"
+            ],
+            "aftercare": [
+              "Avoid chewing on treated tooth",
+              "Return for permanent crown",
+              "Take prescribed medications"
+            ]
+          },
+          "crowns": {
+            "description": "Cap to cover damaged tooth",
+            "duration": "Two visits: 90 minutes each",
+            "process": [
+              "Second visit: Permanent crown placement",
+              "First visit: Preparation and temporary crown"
+            ],
+            "care_instructions": [
+              "Regular checkups required",
+              "Avoid sticky foods with temporary crown",
+              "Maintain good oral hygiene"
+            ]
+          }
+        },
+        "post_treatment_care": {
+          "general_guidelines": [
+            "Contact office if issues arise",
+            "Take medications as prescribed",
+            "Follow specific aftercare instructions",
+            "Maintain good oral hygiene"
+          ],
+          "pain_management": {
+            "normal_symptoms": [
+              "Slight swelling",
+              "Mild discomfort",
+              "Temporary sensitivity"
+            ],
+            "when_to_call": [
+              "Excessive bleeding",
+              "Fever",
+              "Reaction to medication",
+              "Swelling that worsens",
+              "Severe pain"
+            ]
+          }
+        }
+      },
+      "practice_policies": {
+        "covid_protocols": {
+          "safety_measures": [
+            "Social distancing",
+            "Enhanced sterilization",
+            "PPE requirements",
+            "Health screening questions",
+            "Temperature checks"
+          ],
+          "what_to_expect": [
+            "Arrive with mask",
+            "Hand sanitization required",
+            "Wait in car until appointment",
+            "Reduced waiting room capacity"
+          ]
+        },
+        "privacy": {
+          "hipaa_compliance": "Strict adherence to privacy laws",
+          "information_sharing": "Only with written consent",
+          "records_access": "Available upon written request"
+        },
+        "accessibility": {
+          "facility": [
+            "Wheelchair accessible",
+            "Handicap parking",
+            "Ground floor location",
+            "Wide doorways"
+          ],
+          "special_needs": "Accommodations available upon request"
+        }
+      },
+      "faqs": {
+        "general": {
+          "parking": "Free parking available in front of building",
+          "wifi": "Complimentary WiFi in waiting room",
+          "children": "Children welcome; play area available",
+          "languages": [
+            "Spanish",
+            "Other languages via interpreter",
+            "English"
+          ]
+        },
+        "clinical": {
+          "x_ray_frequency": "Based on dental history and needs",
+          "cleaning_importance": "Prevents cavities and gum disease",
+          "fluoride_use": "Safe and recommended for cavity prevention",
+          "sealants": "Recommended for children's molars"
+        },
+        "insurance_billing": {
+          "claims_filing": "We file all insurance claims",
+          "payment_timing": "Due at time of service",
+          "statements": "Monthly billing statements",
+          "insurance_maximums": "We track your annual benefits"
+        }
+      }
+    },
+    "special_instructions": "",
+    "behaviour_mode": "ASSISTANT",
+    "services_offered": {
+      "preventive": {
+        "cleanings": {
+          "name": "Professional Dental Cleaning",
+          "frequency": "Every 6 months",
+          "description": "Thorough cleaning and polishing of teeth",
+          "types": [
+            "Regular Cleaning (Prophylaxis)",
+            "Deep Cleaning (Scaling and Root Planing)",
+            "Pediatric Cleaning"
+          ]
+        },
+        "examinations": {
+          "name": "Comprehensive Dental Exam",
+          "frequency": "Annual",
+          "description": "Complete oral health evaluation",
+          "includes": [
+            "Digital X-rays",
+            "Oral Cancer Screening",
+            "Gum Disease Evaluation",
+            "TMJ Assessment",
+            "Bite Analysis"
+          ]
+        },
+        "x_rays": {
+          "name": "Dental X-Rays",
+          "frequency": "As needed",
+          "description": "Digital x-rays for diagnostic purposes",
+          "types": [
+            "Bitewing X-rays",
+            "Panoramic X-rays",
+            "3D Cone Beam CT Scan",
+            "Periapical X-rays"
+          ]
+        },
+        "sealants": {
+          "name": "Dental Sealants",
+          "description": "Protective coating for cavity prevention",
+          "recommended_for": "Children and teenagers",
+          "duration": "Several years with proper care"
+        },
+        "fluoride": {
+          "name": "Fluoride Treatment",
+          "description": "Mineral treatment to prevent tooth decay",
+          "frequency": "With regular cleanings",
+          "types": [
+            "Foam",
+            "Gel",
+            "Varnish"
+          ]
+        }
+      },
+      "restorative": {
+        "fillings": {
+          "name": "Dental Fillings",
+          "types": [
+            "Composite (Tooth-colored)",
+            "Amalgam (Silver)",
+            "Glass Ionomer",
+            "Ceramic"
+          ],
+          "description": "Repair of cavities or damaged teeth",
+          "procedure_time": "30-60 minutes per tooth"
+        },
+        "crowns": {
+          "name": "Dental Crowns",
+          "types": [
+            "Porcelain",
+            "Ceramic",
+            "Porcelain-fused-to-metal",
+            "Gold",
+            "Stainless Steel (primarily for children)"
+          ],
+          "description": "Full coverage restoration of damaged teeth",
+          "procedure_time": "Two visits: preparation and placement"
+        },
+        "bridges": {
+          "name": "Dental Bridges",
+          "types": [
+            "Traditional Bridge",
+            "Cantilever Bridge",
+            "Maryland Bridge",
+            "Implant-supported Bridge"
+          ],
+          "description": "Replace missing teeth with artificial ones",
+          "duration": "5-15 years with proper care"
+        },
+        "dentures": {
+          "name": "Dentures",
+          "types": [
+            "Complete Dentures",
+            "Partial Dentures",
+            "Immediate Dentures",
+            "Implant-supported Dentures"
+          ],
+          "description": "Removable replacements for missing teeth",
+          "includes": "Fitting, adjustments, and maintenance"
+        }
+      },
+      "cosmetic": {
+        "whitening": {
+          "name": "Teeth Whitening",
+          "types": [
+            "In-Office Professional Whitening",
+            "Take-Home Professional Kits",
+            "Laser Whitening"
+          ],
+          "description": "Professional teeth whitening services",
+          "duration": "60-90 minutes (in-office)"
+        },
+        "veneers": {
+          "name": "Dental Veneers",
+          "types": [
+            "Porcelain Veneers",
+            "Composite Veneers",
+            "Lumineers"
+          ],
+          "description": "Custom-made shells to improve tooth appearance",
+          "duration": "2-3 visits for complete process"
+        },
+        "bonding": {
+          "name": "Dental Bonding",
+          "description": "Repair of chipped, cracked, or discolored teeth",
+          "procedure_time": "30-60 minutes per tooth",
+          "duration": "3-10 years with proper care"
+        },
+        "smile_makeover": {
+          "name": "Smile Makeover",
+          "description": "Comprehensive cosmetic dental treatment plan",
+          "may_include": [
+            "Veneers",
+            "Whitening",
+            "Crowns",
+            "Orthodontics",
+            "Gum Contouring"
+          ]
+        }
+      },
+      "pediatric": {
+        "preventive_care": {
+          "name": "Pediatric Preventive Care",
+          "services": [
+            "Child-Friendly Cleanings",
+            "Fluoride Treatments",
+            "Sealants",
+            "Space Maintainers"
+          ],
+          "description": "Specialized care for children's oral health",
+          "includes": "Oral health education and hygiene instruction"
+        },
+        "behavior_management": {
+          "name": "Pediatric Behavior Management",
+          "techniques": [
+            "Tell-Show-Do",
+            "Positive Reinforcement",
+            "Distraction",
+            "Nitrous Oxide (if needed)"
+          ],
+          "description": "Child-friendly approaches to dental care"
+        },
+        "early_orthodontics": {
+          "name": "Early Orthodontic Treatment",
+          "services": [
+            "Growth Modification",
+            "Space Maintainers",
+            "Habit Breaking Appliances",
+            "Phase 1 Orthodontics"
+          ],
+          "description": "Early intervention for bite and alignment issues"
+        },
+        "emergency_care": {
+          "name": "Pediatric Emergency Care",
+          "situations": [
+            "Toothache",
+            "Knocked-out Tooth",
+            "Broken/Chipped Tooth",
+            "Dental Injury",
+            "Lost Filling"
+          ],
+          "description": "Immediate care for pediatric dental emergencies"
+        }
+      },
+      "orthodontics": {
+        "traditional_braces": {
+          "name": "Traditional Braces",
+          "types": [
+            "Metal Braces",
+            "Ceramic Braces",
+            "Self-ligating Braces"
+          ],
+          "description": "Fixed appliances to straighten teeth",
+          "duration": "12-36 months average treatment time"
+        },
+        "clear_aligners": {
+          "name": "Clear Aligners",
+          "types": [
+            "Invisalign",
+            "ClearCorrect",
+            "Other Clear Aligner Systems"
+          ],
+          "description": "Removable clear aligners for teeth straightening",
+          "includes": "Digital treatment planning and monitoring"
+        }
+      },
+      "emergency": {
+        "urgent_care": {
+          "name": "Emergency Dental Care",
+          "availability": "24/7",
+          "description": "Immediate care for dental emergencies",
+          "services": [
+            "Severe Pain Relief",
+            "Swelling Treatment",
+            "Tooth Repair",
+            "Infection Management",
+            "Trauma Care"
+          ]
+        },
+        "same_day": {
+          "name": "Same-Day Emergency Treatment",
+          "description": "Prompt care for urgent dental issues",
+          "situations": [
+            "Knocked-out Tooth",
+            "Loose Tooth",
+            "Lost Crown/Filling",
+            "Broken Dentures",
+            "Severe Toothache"
+          ]
+        }
+      },
+      "specialty": {
+        "endodontics": {
+          "name": "Root Canal Therapy",
+          "procedures": [
+            "Standard Root Canal",
+            "Retreatment",
+            "Apicoectomy",
+            "Pulp Capping"
+          ],
+          "description": "Treatment of tooth pulp and root issues"
+        },
+        "periodontics": {
+          "name": "Gum Disease Treatment",
+          "procedures": [
+            "Deep Cleaning",
+            "Gum Surgery",
+            "Bone Grafting",
+            "Gum Grafting",
+            "Laser Therapy"
+          ],
+          "description": "Treatment of gum disease and related issues"
+        },
+        "oral_surgery": {
+          "name": "Oral Surgery",
+          "procedures": [
+            "Tooth Extraction",
+            "Wisdom Teeth Removal",
+            "Dental Implants",
+            "Bone Grafting",
+            "Jaw Surgery"
+          ],
+          "description": "Surgical procedures for complex dental issues"
+        },
+        "implants": {
+          "name": "Dental Implants",
+          "types": [
+            "Single Tooth Implants",
+            "Multiple Tooth Implants",
+            "All-on-4 Implants",
+            "Implant-Supported Dentures"
+          ],
+          "description": "Permanent tooth replacement solutions"
+        }
+      },
+      "additional": {
+        "sleep_dentistry": {
+          "name": "Sleep Dentistry",
+          "services": [
+            "Sleep Apnea Treatment",
+            "Snoring Appliances",
+            "TMJ Treatment",
+            "Night Guards"
+          ],
+          "description": "Treatment for sleep-related dental issues"
+        },
+        "sedation": {
+          "name": "Sedation Dentistry",
+          "options": [
+            "Nitrous Oxide",
+            "Oral Sedation",
+            "IV Sedation",
+            "General Anesthesia"
+          ],
+          "description": "Various levels of sedation for anxious patients"
+        }
+      }
+    },
+    "rate_limiting": {
+      "call_frequency": 3,
+      "temporarily_blocking_period": 30,
+      "temporarily_blocking_message": "We've noticed multiple calls in a short time. To ensure fair access, your number is temporarily blocked for 30 minutes. Please try again later.",
+      "appointments_requests_per_day": 5,
+      "appointments_requests_violation_message": "You've reached the daily limit of 5 appointment requests. Please try again tomorrow or contact the office for further assistance.",
+      "reschedule_requests_per_day": 1,
+      "reschedule_requests_violation_message": "You've already rescheduled an appointment today. To maintain fairness, rescheduling is limited to once per day. Please try again tomorrow."
+    },
+    "speech_audio_processing": {
+      "silence_detection": 3,
+      "user_prompt_message": "Hi, are you there?",
+      "end_of_speech_timeout": 1.5,
+      "minimum_speech_length": 300,
+      "noise_reduction": {
+        "enabled": true,
+        "level": "moderate"
+      },
+      "voice_activity_detection": {
+        "enabled": true,
+        "sensitivity": 0.7
+      }
+    },
+    "conversational_flow": {
+      "re_prompt_attempts": 2,
+      "frustrating_user_call_ending_message": "It seems like your requests are outside my expertise. I'm here to assist with dental-related inquiries. If you need help with appointments or services, feel free to ask. Otherwise, I'll need to end this call now. Have a great day!",
+      "session_timeout": 30,
+      "session_inactive_call_ending_message": "It looks like you're away. I'll go ahead and end this call now. If you need any assistance, feel free to call back. Have a great day!",
+      "turn_taking_gap": 0.8,
+      "clarification_attempts": 2,
+      "handoff_threshold": 3
+    },
+    "guardrails": {
+      "prohibited_topics": [
+        "medical_advice",
+        "diagnosis",
+        "treatment_recommendations",
+        "medication_advice",
+        "personal_health_information"
+      ],
+      "sensitive_information": {
+        "pii_handling": "never_store",
+        "health_info_handling": "minimal_necessary"
+      },
+      "emergency_triggers": [
+        "severe pain",
+        "bleeding",
+        "swelling",
+        "accident",
+        "trauma"
+      ],
+      "emergency_response": {
+        "message": "This sounds like an emergency situation. Please call our emergency line at {emergency_number} immediately. If this is a life-threatening emergency, please call 911 or go to the nearest emergency room.",
+        "immediate_transfer": true
+      },
+      "compliance": {
+        "hipaa_compliant": true,
+        "data_retention": "minimum_necessary",
+        "consent_required": true
+      }
+    },
+    "additional_instructions": "\n1. Operating Hours Handling:\n   - Check practice hours before scheduling\n   - Provide next-day options for after-hours calls\n   - Clearly communicate holiday schedules\n\n2. Patient Communication:\n   - Use simple, clear language\n   - Avoid medical jargon when possible\n   - Repeat important information for clarity\n\n3. Appointment Management:\n   - Confirm all appointment details\n   - Explain preparation requirements\n   - Send follow-up confirmations\n\n4. Emergency Protocols:\n   - Quickly identify emergency situations\n   - Provide immediate emergency contact numbers\n   - Document all emergency-related communications\n\n5. Special Considerations:\n   - Accommodate accessibility needs\n   - Note patient preferences\n   - Handle language barriers appropriately\n",
+    "status": "active",
+    "practices": [
+      {
+        "id": 1,
+        "display_name": "Avondale Smiles",
+        "address": "11523 Avondale Road NE #115, Redmond WA 98052",
+        "city": "",
+        "state": "",
+        "zipcode": "",
+        "time_zone": "America/Los_Angeles",
+        "working_hours": {},
+        "phone_number": "",
+        "email_address": "",
+        "active": true,
+        "welcome_greeting_override": "",
+        "knowledge_base_override": "",
+        "services_offered_override": "",
+        "rate_limiting_override": {},
+        "guardrails_override": {},
+        "practice_specific_data": {
+          "provider_settings_list": [
+            {
+              "id": "2",
+              "pms_provider_id": "DOC1",
+              "first_name": "Mr.",
+              "last_name": "John",
+              "gender": "M",
+              "role": "Doctor",
+              "full_gender_name": "Male",
+              "bio": null,
+              "is_disabled": false,
+              "date_availability": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ]
+            },
+            {
+              "id": "1",
+              "pms_provider_id": "HYG1",
+              "first_name": "Dr.",
+              "last_name": "Doe",
+              "gender": "M",
+              "role": "Doctor",
+              "full_gender_name": "Male",
+              "bio": null,
+              "is_disabled": false,
+              "date_availability": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ]
+            }
+          ],
+          "visit_types": [
+            {
+              "id": "1",
+              "name": "Dental Crowns (1 doc)",
+              "allow_new_patient": true,
+              "allow_returning_patient": true,
+              "duration": 60,
+              "is_disabled": false,
+              "patient_message": "",
+              "providers": [
+                {
+                  "pm_provider_id": "DOC1"
+                }
+              ],
+              "order": 1,
+              "min_allowed_age": null,
+              "max_allowed_age": null,
+              "allow_no_provider": false,
+              "stop_auto_sync": false,
+              "check_recall_date": false,
+              "min_hours_to_appt": null,
+              "max_months_to_appt": null,
+              "settings": null,
+              "chatbot_description": ""
+            },
+            {
+              "id": "2",
+              "name": "Teeth Whitening (1 doc, no selection)",
+              "allow_new_patient": true,
+              "allow_returning_patient": true,
+              "duration": 60,
+              "is_disabled": false,
+              "patient_message": "",
+              "providers": [
+                {
+                  "pm_provider_id": "AB"
+                }
+              ],
+              "order": 2,
+              "min_allowed_age": 0,
+              "max_allowed_age": 110,
+              "allow_no_provider": true,
+              "stop_auto_sync": false,
+              "check_recall_date": false,
+              "min_hours_to_appt": 0,
+              "max_months_to_appt": 0,
+              "settings": null,
+              "chatbot_description": ""
+            },
+            {
+              "id": "3",
+              "name": "Dental Implants (multiple, selection allowed)",
+              "allow_new_patient": true,
+              "allow_returning_patient": true,
+              "duration": 60,
+              "is_disabled": false,
+              "patient_message": "",
+              "providers": [
+                {
+                  "pm_provider_id": "AB"
+                }
+              ],
+              "order": 3,
+              "min_allowed_age": null,
+              "max_allowed_age": null,
+              "allow_no_provider": false,
+              "stop_auto_sync": false,
+              "check_recall_date": false,
+              "min_hours_to_appt": null,
+              "max_months_to_appt": null,
+              "settings": null,
+              "chatbot_description": ""
+            },
+            {
+              "id": "4",
+              "name": "Dental Emergency (multiple doc, no selection)",
+              "allow_new_patient": true,
+              "allow_returning_patient": true,
+              "duration": 60,
+              "is_disabled": false,
+              "patient_message": "",
+              "providers": [
+                {
+                  "pm_provider_id": "AB"
+                }
+              ],
+              "order": 4,
+              "min_allowed_age": 0,
+              "max_allowed_age": 110,
+              "allow_no_provider": true,
+              "stop_auto_sync": false,
+              "check_recall_date": false,
+              "min_hours_to_appt": 0,
+              "max_months_to_appt": 0,
+              "settings": null,
+              "chatbot_description": ""
+            }
+          ],
+          "keywords": [
+            1,
+            2,
+            "C",
+            "START",
+            "STOP",
+            "PAUSE"
+          ]
+        }
+      }
+    ]
+  }
