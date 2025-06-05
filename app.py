@@ -6,9 +6,12 @@ from pydantic import BaseModel
 from openai import OpenAI
 from dotenv import load_dotenv
 from vector_db import DentalKnowledgeBase
-from typing import Optional, Dict
+from typing import Optional, Dict, Tuple
 import uuid
 from datetime import datetime, timedelta
+
+# Disable tokenizers parallelism warning
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 # Load environment variables
 load_dotenv()
@@ -76,56 +79,93 @@ class ChatRequest(BaseModel):
     message: str
     session_id: Optional[str] = None
 
-def get_ai_response(query: str, context: str, messages: list) -> tuple[str, dict, dict]:
-    """Get AI response using GPT-4 with RAG context. Returns (response_text, token_info, request_details)."""
+def get_ai_response(query: str, context: str, messages: list) -> Tuple[str, dict, dict]:
+    """Get AI response using GPT-4 with RAG context and prompt caching for static content."""
     try:
-        # Only add the context and query to messages, not the system prompt
-        current_messages = messages.copy()  # Use a copy to avoid modifying the original
-        current_messages.append({"role": "user", "content": f"Context information:\n{context}\n\nUser question: {query}"})
+        # Separate static and dynamic content for caching
+        # Static content that can be cached (doesn't change between requests)
+        static_system_message = {
+            "role": "system", 
+            "content": SYSTEM_PROMPT
+        }
+        
+        # Dynamic content (changes with each request)
+        dynamic_user_message = {
+            "role": "user", 
+            "content": f"Context information:\n{context}\n\nUser question: {query}"
+        }
+        
+        # Build messages array: static system prompt + conversation history + current query
+        current_messages = [static_system_message]  # Start with cached system prompt
+        
+        # Add existing conversation history (skip the system message if it's already there)
+        for msg in messages:
+            if msg.get("role") != "system":  # Skip system messages from history to avoid duplication
+                current_messages.append(msg)
+        
+        # Add the current dynamic query
+        current_messages.append(dynamic_user_message)
         
         # Prepare request details for UI display
         request_details = {
             "context": context,
+            "cached_system_prompt": True,  # Indicate that system prompt is cached
             "messages": [
                 {
                     "role": msg["role"],
-                    "content": msg["content"]  # Remove truncation - show full content
+                    "content": msg["content"],  # Full content, no truncation
+                    "cached": msg["role"] == "system"  # Mark system messages as cached
                 }
                 for msg in current_messages
             ]
         }
         
+        # Make API call with caching enabled
         response = client.chat.completions.create(
             model="gpt-4",
             messages=current_messages,
             temperature=0.8,
             max_tokens=5000,
             presence_penalty=0.6,
-            frequency_penalty=0.3
+            frequency_penalty=0.3,
+            # Enable prompt caching for static content
+            extra_headers={
+                "OpenAI-Beta": "prompt-caching-2024-04-01"
+            }
         )
         
-        # Add the response to the original messages list
-        messages.append({"role": "user", "content": f"Context information:\n{context}\n\nUser question: {query}"})
+        # Add the conversation to the original messages list (excluding the system prompt)
+        messages.append(dynamic_user_message)
         messages.append({"role": "assistant", "content": response.choices[0].message.content})
         
-        # Extract token usage information
+        # Extract token usage information with cache details
+        usage = response.usage
         token_info = {
-            "prompt_tokens": response.usage.prompt_tokens,
-            "completion_tokens": response.usage.completion_tokens,
-            "total_tokens": response.usage.total_tokens
+            "prompt_tokens": usage.prompt_tokens,
+            "completion_tokens": usage.completion_tokens,
+            "total_tokens": usage.total_tokens,
+            "cached_tokens": 0  # Default to 0 if no cache info available
         }
+        
+        # Try to get cached tokens if available (this is still experimental)
+        try:
+            if hasattr(usage, 'prompt_tokens_details') and usage.prompt_tokens_details:
+                if hasattr(usage.prompt_tokens_details, 'cached_tokens'):
+                    token_info["cached_tokens"] = usage.prompt_tokens_details.cached_tokens
+        except Exception as e:
+            # Continue without cached token info
+            pass
         
         return response.choices[0].message.content, token_info, request_details
     except Exception as e:
-        print(f"Error in OpenAI API call: {str(e)}")
         raise HTTPException(status_code=500, detail="Error getting response from AI model")
 
 def create_new_session() -> str:
     """Create a new chat session and return its ID."""
     session_id = str(uuid.uuid4())
-    # Only add system prompt for new sessions
+    # Don't store system prompt in session - we'll handle it separately for caching
     chat_sessions[session_id] = {
-        "messages": [{"role": "system", "content": SYSTEM_PROMPT}],  # System prompt only added once
+        "messages": [],  # Start with empty messages array, system prompt handled in get_ai_response
         "created_at": datetime.now(),
         "last_activity": datetime.now()
     }
