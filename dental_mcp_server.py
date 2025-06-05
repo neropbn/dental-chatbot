@@ -19,9 +19,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configuration from environment variables
-PBN_APP_DOMAIN = os.getenv("PBN_APP_DOMAIN", "")
+PBN_APP_DOMAIN = os.getenv("PBN_APP_DOMAIN", "https://devtest.pbn-dev.com")
 CHATBOT_AUTH_SECRET_KEY = os.getenv("CHATBOT_AUTH_SECRET_KEY", "")
-ORGANIZATION_ID = os.getenv("ORGANIZATION_ID", "")
+ORGANIZATION_ID = os.getenv("ORGANIZATION_ID", "1")
 DEFAULT_PRACTICE_IDS = os.getenv("DEFAULT_PRACTICE_IDS", "").split(",") if os.getenv("DEFAULT_PRACTICE_IDS") else []
 
 # Authentication token storage
@@ -60,27 +60,53 @@ async def get_auth_token() -> Optional[str]:
     
     # Need to get new token
     if not CHATBOT_AUTH_SECRET_KEY or not PBN_APP_DOMAIN:
+        print(f"Missing credentials: AUTH_KEY={bool(CHATBOT_AUTH_SECRET_KEY)}, DOMAIN={bool(PBN_APP_DOMAIN)}")
         return None
     
     try:
         async with httpx.AsyncClient() as client:
+            # Use the correct PBN authentication endpoint
+            auth_url = f"{PBN_APP_DOMAIN}/chatbot/auth/authenticate/"
+            
+            # Use the correct payload format
+            payload = {
+                "key": CHATBOT_AUTH_SECRET_KEY,
+                "organization_id": int(ORGANIZATION_ID)
+            }
+            
+            print(f"Attempting authentication to: {auth_url}")
+            print(f"With organization_id: {ORGANIZATION_ID}")
+            
             response = await client.post(
-                f"{PBN_APP_DOMAIN}/api/auth/chatbot",
-                json={"secret_key": CHATBOT_AUTH_SECRET_KEY},
-                timeout=30.0
+                auth_url,
+                json=payload,
+                timeout=30.0,
+                headers={"Content-Type": "application/json"}
             )
+            
+            print(f"Auth response status: {response.status_code}")
             
             if response.status_code == 200:
                 data = response.json()
-                auth_token = data.get("access_token")
-                # Token expires in 24 hours
-                token_expires_at = datetime.now() + timedelta(hours=23)
-                return auth_token
+                print(f"Auth response data: {data}")
+                
+                # Extract token from response (adjust field name based on actual response)
+                auth_token = data.get("token") or data.get("access_token") or data.get("auth_token")
+                
+                if auth_token:
+                    # Token expires in 24 hours
+                    token_expires_at = datetime.now() + timedelta(hours=23)
+                    print("✅ Authentication successful!")
+                    return auth_token
+                else:
+                    print(f"❌ No token found in response: {data}")
+                    return None
             else:
+                print(f"❌ Authentication failed with status {response.status_code}: {response.text}")
                 return None
                 
     except Exception as e:
-        print(f"Error getting auth token: {str(e)}")
+        print(f"❌ Error getting auth token: {str(e)}")
         return None
 
 async def make_pbn_request(endpoint: str, method: str = "GET", params: Dict = None, data: Dict = None) -> Dict:
@@ -94,7 +120,13 @@ async def make_pbn_request(endpoint: str, method: str = "GET", params: Dict = No
         "Content-Type": "application/json"
     }
     
-    url = f"{PBN_APP_DOMAIN}/api{endpoint}"
+    # Use the correct API base URL structure
+    if endpoint.startswith("/api/"):
+        url = f"{PBN_APP_DOMAIN}{endpoint}"
+    else:
+        url = f"{PBN_APP_DOMAIN}/api{endpoint}"
+    
+    print(f"Making request to: {url}")
     
     try:
         async with httpx.AsyncClient() as client:
@@ -105,13 +137,19 @@ async def make_pbn_request(endpoint: str, method: str = "GET", params: Dict = No
             else:
                 return {"error": f"Unsupported HTTP method: {method}"}
             
+            print(f"API response status: {response.status_code}")
+            
             if response.status_code == 200:
                 return response.json()
             else:
-                return {"error": f"API request failed with status {response.status_code}: {response.text}"}
+                error_msg = f"API request failed with status {response.status_code}: {response.text}"
+                print(f"❌ {error_msg}")
+                return {"error": error_msg}
                 
     except Exception as e:
-        return {"error": f"Request failed: {str(e)}"}
+        error_msg = f"Request failed: {str(e)}"
+        print(f"❌ {error_msg}")
+        return {"error": error_msg}
 
 @tool("find_patients_by_phone", "Find patients by their phone number")
 async def find_patients_by_phone(phone_number: str) -> str:
