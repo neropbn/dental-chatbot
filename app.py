@@ -10,6 +10,9 @@ from typing import Optional, Dict, Tuple
 import uuid
 from datetime import datetime, timedelta
 
+# Import MCP client
+from mcp_client import initialize_mcp_client, get_mcp_status, dental_mcp_client
+
 # Disable tokenizers parallelism warning
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
@@ -70,6 +73,18 @@ Response guidelines:
     * The question is about a complex procedure
     * The user seems concerned or anxious
 
+IMPORTANT - MCP Tools Available:
+You have access to real-time dental practice management tools that can:
+- Find patients by phone number
+- Look up patient appointments
+- Check available appointment slots
+- Get visit types for practices
+- Book appointments
+- Send OTP verification
+
+When patients ask about appointments, scheduling, or provide their phone number, you should use these tools to get real information.
+For example, if someone says "I'd like to check my appointments" or provides a phone number, use the tools to look up their actual data.
+
 Use the provided context to answer questions accurately and professionally.
 If the context doesn't contain enough information, say you'll check with the dentist or another staff member.
 
@@ -78,6 +93,42 @@ Remember: Be natural, conversational, and professional while maintaining your id
 class ChatRequest(BaseModel):
     message: str
     session_id: Optional[str] = None
+
+async def detect_mcp_intent(query: str) -> Optional[Dict]:
+    """Detect if the user query requires MCP tool usage"""
+    query_lower = query.lower()
+    
+    # Phone number patterns
+    import re
+    phone_pattern = r'\b\d{3}[-.]?\d{3}[-.]?\d{4}\b|\b\(\d{3}\)\s*\d{3}[-.]?\d{4}\b'
+    has_phone = bool(re.search(phone_pattern, query))
+    
+    # Appointment-related keywords
+    appointment_keywords = ['appointment', 'schedule', 'book', 'available', 'slot', 'time']
+    patient_keywords = ['patient', 'my record', 'my info', 'find me']
+    
+    if has_phone:
+        # Extract phone number
+        phone_match = re.search(phone_pattern, query)
+        if phone_match:
+            return {
+                "action": "find_patient",
+                "phone": phone_match.group()
+            }
+    
+    if any(keyword in query_lower for keyword in appointment_keywords):
+        if 'available' in query_lower or 'slot' in query_lower:
+            return {
+                "action": "get_available_slots",
+                "query": query
+            }
+        elif 'my appointment' in query_lower or 'check appointment' in query_lower:
+            return {
+                "action": "get_appointments",
+                "query": query
+            }
+    
+    return None
 
 def get_ai_response(query: str, context: str, messages: list) -> Tuple[str, dict, dict]:
     """Get AI response using GPT-4 with RAG context and prompt caching for static content."""
@@ -110,6 +161,7 @@ def get_ai_response(query: str, context: str, messages: list) -> Tuple[str, dict
         request_details = {
             "context": context,
             "cached_system_prompt": True,  # Indicate that system prompt is cached
+            "mcp_available": dental_mcp_client.connected,
             "messages": [
                 {
                     "role": msg["role"],
@@ -179,9 +231,24 @@ def get_or_create_session(session_id: Optional[str] = None) -> str:
         return session_id
     return create_new_session()
 
+@app.on_event("startup")
+async def startup_event():
+    """Initialize MCP client on startup"""
+    success = await initialize_mcp_client()
+    if success:
+        print("✅ MCP client connected successfully")
+        print(f"Available tools: {dental_mcp_client.get_available_tools()}")
+    else:
+        print("❌ Failed to connect to MCP server")
+
 @app.get("/", response_class=HTMLResponse)
 async def get_chat(request: Request):
     return templates.TemplateResponse("chat.html", {"request": request})
+
+@app.get("/mcp/status")
+async def mcp_status():
+    """Get MCP server status"""
+    return await get_mcp_status()
 
 @app.post("/chat")
 async def chat(request: ChatRequest):
@@ -190,21 +257,61 @@ async def chat(request: ChatRequest):
         session_id = get_or_create_session(request.session_id)
         session = chat_sessions[session_id]
         
+        # Check if we need to use MCP tools
+        mcp_intent = await detect_mcp_intent(request.message)
+        mcp_result = None
+        
+        if mcp_intent and dental_mcp_client.connected:
+            try:
+                if mcp_intent["action"] == "find_patient":
+                    mcp_result = await dental_mcp_client.call_tool(
+                        "find_patients_by_phone", 
+                        {"phone_number": mcp_intent["phone"]}
+                    )
+                elif mcp_intent["action"] == "get_available_slots":
+                    # For now, use default practice ID - could be made configurable
+                    import os
+                    default_practices = os.getenv("DEFAULT_PRACTICE_IDS", "").split(",")
+                    if default_practices and default_practices[0]:
+                        try:
+                            practice_id = int(default_practices[0])
+                            from datetime import date
+                            today = date.today()
+                            end_date = date.today() + timedelta(days=30)
+                            mcp_result = await dental_mcp_client.call_tool(
+                                "get_available_slots",
+                                {
+                                    "practice_id": practice_id,
+                                    "start_date": today.isoformat(),
+                                    "end_date": end_date.isoformat()
+                                }
+                            )
+                        except ValueError:
+                            mcp_result = "Error: Invalid practice ID configuration"
+                    else:
+                        mcp_result = "Error: No default practice configured"
+            except Exception as e:
+                mcp_result = f"Error using MCP tools: {str(e)}"
+        
         # Get relevant context from vector database
         context = kb.get_context_for_query(request.message)
+        
+        # Add MCP result to context if available
+        if mcp_result:
+            context = f"Real-time data from practice management system:\n{mcp_result}\n\n{context}"
         
         # Get AI response using the context and existing messages
         response_text, token_info, request_details = get_ai_response(request.message, context, session["messages"])
         
-        # Log token usage for debugging
-        print(f"Session {session_id} - Messages in history: {len(session['messages'])}")
-        print(f"Token usage - Prompt: {token_info['prompt_tokens']}, Completion: {token_info['completion_tokens']}")
+        # Add MCP information to request details
+        request_details["mcp_used"] = bool(mcp_result)
+        request_details["mcp_result"] = mcp_result
         
         return {
             "response": response_text,
             "token_usage": token_info,
             "session_id": session_id,
-            "request_details": request_details  # Include the request details in the response
+            "request_details": request_details
         }
     
     except Exception as e:
