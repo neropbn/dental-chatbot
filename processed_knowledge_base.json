@@ -1,0 +1,859 @@
+{
+  "chunks": [
+    {
+      "text": "The virtual assistant for Roman Burke says: 'Hello! I'm the virtual assistant for Test. How may I help you today? I can assist with appointments, general information, or connect you with our staff.'",
+      "metadata": {
+        "type": "general_greeting",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "About Roman Burke: We are a full-service dental practice committed to providing exceptional care in a comfortable environment. Our team of experienced professionals uses state-of-the-art technology to ensure the highest quality of dental care.",
+      "metadata": {
+        "type": "practice_info",
+        "subtype": "about",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Roman Burke offers a wide range of services including: Pediatric Dentistry, Preventive Care, TMJ Treatment, Oral Surgery, Orthodontics, Endodontics, Cosmetic Dentistry, Dental Implants, Sedation Dentistry, Periodontics, General Dentistry, Emergency Dental Care, Sleep Apnea Treatment.",
+      "metadata": {
+        "type": "practice_info",
+        "subtype": "services_overview",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Roman Burke accepts the following insurance types: PPO, Medicaid, Tricare (Military Insurance), HMO, MetLife, Delta Dental, Cigna, United Healthcare, Medicare, Guardian, Aetna, CHIP (Children's Health Insurance Program).",
+      "metadata": {
+        "type": "insurance",
+        "subtype": "accepted_types",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Regarding insurance verification: We verify insurance coverage before appointments and can provide estimated costs. Please have your insurance card ready when scheduling. We'll need the subscriber's name, ID number, and group number.",
+      "metadata": {
+        "type": "insurance",
+        "subtype": "verification_process",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Common insurance question: Coverage verification. Answer: We can verify your coverage before treatment.",
+      "metadata": {
+        "type": "insurance",
+        "subtype": "common_question",
+        "question_key": "coverage_verification",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Common insurance question: Pre authorization. Answer: Some procedures may require pre-authorization.",
+      "metadata": {
+        "type": "insurance",
+        "subtype": "common_question",
+        "question_key": "pre_authorization",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Common insurance question: Out of network. Answer: We may offer out-of-network benefits.",
+      "metadata": {
+        "type": "insurance",
+        "subtype": "common_question",
+        "question_key": "out_of_network",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Common insurance question: Annual maximums. Answer: We track your insurance usage and benefits.",
+      "metadata": {
+        "type": "insurance",
+        "subtype": "common_question",
+        "question_key": "annual_maximums",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Common insurance question: Coordination of benefits. Answer: We can help coordinate between multiple insurance plans.",
+      "metadata": {
+        "type": "insurance",
+        "subtype": "common_question",
+        "question_key": "coordination_of_benefits",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Roman Burke accepts these payment methods: Debit Cards, Personal Checks, Credit Cards (Visa, MasterCard, American Express, Discover), HSA/FSA Cards, Cash, Wells Fargo Health Advantage, CareCredit, Insurance, Payment Plans.",
+      "metadata": {
+        "type": "payment",
+        "subtype": "accepted_methods",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "CareCredit financing is available at Roman Burke. Description: Special healthcare financing with deferred interest. Application: Can apply in office or online. Terms: Various payment terms available from 6-24 months.",
+      "metadata": {
+        "type": "payment",
+        "subtype": "financing_carecredit",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "In-house payment plans are offered at Roman Burke. Description: Custom payment plans for qualifying patients. Terms: Flexible monthly payments. Requirements: Valid ID and credit check may be required.",
+      "metadata": {
+        "type": "payment",
+        "subtype": "financing_inhouse",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "New patient appointments at Roman Burke typically last 90 minutes. They include: Treatment plan discussion, Cleaning (if time permits), Full set of x-rays, Comprehensive exam. Requirements: Bring ID and insurance card, Arrive 15 minutes early, List of current medications, Complete medical history form.",
+      "metadata": {
+        "type": "appointment",
+        "subtype": "new_patient",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Routine dental cleanings at Roman Burke are 60 minutes long and recommended Every 6 months. They include: Professional cleaning, Oral cancer screening, Exam by dentist, X-rays (if due).",
+      "metadata": {
+        "type": "appointment",
+        "subtype": "routine_cleaning",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "For emergencies, Roman Burke offers Same-day appointments for emergencies. Qualifying conditions include: Severe swelling, Bleeding that won't stop, Broken or chipped tooth, Severe tooth pain, Dental trauma, Lost filling or crown.",
+      "metadata": {
+        "type": "appointment",
+        "subtype": "emergency_appt",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Appointments at Roman Burke can be booked via: Virtual assistant, Phone, Mobile app, Online portal.",
+      "metadata": {
+        "type": "appointment",
+        "subtype": "scheduling_methods",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Cancellation policy for Roman Burke: 24 hours notice is required. A fee May apply for late cancellations. Emergency situations considered.",
+      "metadata": {
+        "type": "appointment",
+        "subtype": "cancellation_policy",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Appointment reminders from Roman Burke are sent via Phone call, Text message, Email at 1 week before, 2 days before, Day of appointment.",
+      "metadata": {
+        "type": "appointment",
+        "subtype": "reminders",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Preparing for your first visit to Roman Burke: List of medications, X-rays (if available from previous dentist), Bring insurance card, Previous dental records (if available), Arrive 15 minutes early, Bring valid ID, Complete medical history. What to expect during your first visit: Review of medical history, Comprehensive examination, Financial consultation, Meeting with dental team, Treatment plan discussion, X-rays as needed.",
+      "metadata": {
+        "type": "appointment",
+        "subtype": "first_visit",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "About Cleaning procedure: Professional removal of plaque and tartar. Duration: 30-60 minutes. Frequency: Every 6 months. Preparation: No special preparation needed.",
+      "metadata": {
+        "type": "treatment",
+        "subtype": "common_procedure",
+        "procedure_name": "Cleaning",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "About Fillings procedure: Repair of cavities or tooth decay. Duration: 30-60 minutes. Preparation: No special preparation needed. Types include: Composite (tooth-colored), Amalgam (silver). Aftercare: Wait to eat until numbness subsides, May experience temporary sensitivity, Avoid very hot or cold foods.",
+      "metadata": {
+        "type": "treatment",
+        "subtype": "common_procedure",
+        "procedure_name": "Fillings",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "About Root Canal procedure: Treatment of infected tooth pulp. Duration: 90 minutes to 2 hours. Preparation: No special preparation needed. Steps: Removal of infected tissue, Local anesthesia, Cleaning and sealing, Crown placement (usually separate visit). Aftercare: Avoid chewing on treated tooth, Return for permanent crown, Take prescribed medications.",
+      "metadata": {
+        "type": "treatment",
+        "subtype": "common_procedure",
+        "procedure_name": "Root Canal",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "About Crowns procedure: Cap to cover damaged tooth. Duration: Two visits: 90 minutes each. Preparation: No special preparation needed. Process: Second visit: Permanent crown placement, First visit: Preparation and temporary crown. Care Instructions: Regular checkups required, Avoid sticky foods with temporary crown, Maintain good oral hygiene.",
+      "metadata": {
+        "type": "treatment",
+        "subtype": "common_procedure",
+        "procedure_name": "Crowns",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "General post-treatment care guidelines for Roman Burke: Contact office if issues arise, Take medications as prescribed, Follow specific aftercare instructions, Maintain good oral hygiene.",
+      "metadata": {
+        "type": "treatment",
+        "subtype": "post_care_guidelines",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "For pain management after treatment at Roman Burke: Normal symptoms include Slight swelling, Mild discomfort, Temporary sensitivity. Call the office if you experience: Excessive bleeding, Fever, Reaction to medication, Swelling that worsens, Severe pain.",
+      "metadata": {
+        "type": "treatment",
+        "subtype": "pain_management",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "COVID-19 protocols at Roman Burke include: Social distancing, Enhanced sterilization, PPE requirements, Health screening questions, Temperature checks. When visiting, expect: Arrive with mask, Hand sanitization required, Wait in car until appointment, Reduced waiting room capacity.",
+      "metadata": {
+        "type": "policy",
+        "subtype": "covid_protocols",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Privacy policy at Roman Burke: HIPAA compliance is 'Strict adherence to privacy laws'. Information sharing: 'Only with written consent'. Records access: 'Available upon written request'.",
+      "metadata": {
+        "type": "policy",
+        "subtype": "privacy",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Accessibility at Roman Burke includes: Wheelchair accessible, Handicap parking, Ground floor location, Wide doorways. Special needs accommodations are 'Accommodations available upon request'.",
+      "metadata": {
+        "type": "policy",
+        "subtype": "accessibility",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "General FAQs for Roman Burke: Parking: Free parking available in front of building. WiFi: Complimentary WiFi in waiting room. Children: Children welcome; play area available. Languages spoken: Spanish, Other languages via interpreter, English.",
+      "metadata": {
+        "type": "faq",
+        "subtype": "general",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Clinical FAQs for Roman Burke: X-ray frequency: Based on dental history and needs. Importance of cleaning: Prevents cavities and gum disease. Fluoride use: Safe and recommended for cavity prevention. Sealants: Recommended for children's molars.",
+      "metadata": {
+        "type": "faq",
+        "subtype": "clinical",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Insurance & Billing FAQs for Roman Burke: Claims filing: We file all insurance claims. Payment timing: Due at time of service. Statements: Monthly billing statements. Insurance maximums: We track your annual benefits.",
+      "metadata": {
+        "type": "faq",
+        "subtype": "insurance_billing",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Professional Dental Cleaning. Description: Thorough cleaning and polishing of teeth. Types/Options: Regular Cleaning (Prophylaxis), Deep Cleaning (Scaling and Root Planing), Pediatric Cleaning. Frequency: Every 6 months.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "preventive",
+        "service_name": "Professional Dental Cleaning",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Comprehensive Dental Exam. Description: Complete oral health evaluation. Frequency: Annual. Includes: Digital X-rays, Oral Cancer Screening, Gum Disease Evaluation, TMJ Assessment, Bite Analysis.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "preventive",
+        "service_name": "Comprehensive Dental Exam",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Dental X-Rays. Description: Digital x-rays for diagnostic purposes. Types/Options: Bitewing X-rays, Panoramic X-rays, 3D Cone Beam CT Scan, Periapical X-rays. Frequency: As needed.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "preventive",
+        "service_name": "Dental X-Rays",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Dental Sealants. Description: Protective coating for cavity prevention. Duration: Several years with proper care. Recommended for: Children and teenagers.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "preventive",
+        "service_name": "Dental Sealants",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Fluoride Treatment. Description: Mineral treatment to prevent tooth decay. Types/Options: Foam, Gel, Varnish. Frequency: With regular cleanings.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "preventive",
+        "service_name": "Fluoride Treatment",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Dental Fillings. Description: Repair of cavities or damaged teeth. Types/Options: Composite (Tooth-colored), Amalgam (Silver), Glass Ionomer, Ceramic. Procedure Time: 30-60 minutes per tooth.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "restorative",
+        "service_name": "Dental Fillings",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Dental Crowns. Description: Full coverage restoration of damaged teeth. Types/Options: Porcelain, Ceramic, Porcelain-fused-to-metal, Gold, Stainless Steel (primarily for children). Procedure Time: Two visits: preparation and placement.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "restorative",
+        "service_name": "Dental Crowns",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Dental Bridges. Description: Replace missing teeth with artificial ones. Types/Options: Traditional Bridge, Cantilever Bridge, Maryland Bridge, Implant-supported Bridge. Duration: 5-15 years with proper care.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "restorative",
+        "service_name": "Dental Bridges",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Dentures. Description: Removable replacements for missing teeth. Types/Options: Complete Dentures, Partial Dentures, Immediate Dentures, Implant-supported Dentures. Includes: F, i, t, t, i, n, g, ,,  , a, d, j, u, s, t, m, e, n, t, s, ,,  , a, n, d,  , m, a, i, n, t, e, n, a, n, c, e.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "restorative",
+        "service_name": "Dentures",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Teeth Whitening. Description: Professional teeth whitening services. Types/Options: In-Office Professional Whitening, Take-Home Professional Kits, Laser Whitening. Duration: 60-90 minutes (in-office).",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "cosmetic",
+        "service_name": "Teeth Whitening",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Dental Veneers. Description: Custom-made shells to improve tooth appearance. Types/Options: Porcelain Veneers, Composite Veneers, Lumineers. Duration: 2-3 visits for complete process.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "cosmetic",
+        "service_name": "Dental Veneers",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Dental Bonding. Description: Repair of chipped, cracked, or discolored teeth. Duration: 3-10 years with proper care. Procedure Time: 30-60 minutes per tooth.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "cosmetic",
+        "service_name": "Dental Bonding",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Smile Makeover. Description: Comprehensive cosmetic dental treatment plan. May include: Veneers, Whitening, Crowns, Orthodontics, Gum Contouring.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "cosmetic",
+        "service_name": "Smile Makeover",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Pediatric Preventive Care. Description: Specialized care for children's oral health. Types/Options: Child-Friendly Cleanings, Fluoride Treatments, Sealants, Space Maintainers. Includes: O, r, a, l,  , h, e, a, l, t, h,  , e, d, u, c, a, t, i, o, n,  , a, n, d,  , h, y, g, i, e, n, e,  , i, n, s, t, r, u, c, t, i, o, n.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "pediatric",
+        "service_name": "Pediatric Preventive Care",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Pediatric Behavior Management. Description: Child-friendly approaches to dental care. Types/Options: Tell-Show-Do, Positive Reinforcement, Distraction, Nitrous Oxide (if needed).",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "pediatric",
+        "service_name": "Pediatric Behavior Management",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Early Orthodontic Treatment. Description: Early intervention for bite and alignment issues. Types/Options: Growth Modification, Space Maintainers, Habit Breaking Appliances, Phase 1 Orthodontics.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "pediatric",
+        "service_name": "Early Orthodontic Treatment",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Pediatric Emergency Care. Description: Immediate care for pediatric dental emergencies. Types/Options: Toothache, Knocked-out Tooth, Broken/Chipped Tooth, Dental Injury, Lost Filling.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "pediatric",
+        "service_name": "Pediatric Emergency Care",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Traditional Braces. Description: Fixed appliances to straighten teeth. Types/Options: Metal Braces, Ceramic Braces, Self-ligating Braces. Duration: 12-36 months average treatment time.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "orthodontics",
+        "service_name": "Traditional Braces",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Clear Aligners. Description: Removable clear aligners for teeth straightening. Types/Options: Invisalign, ClearCorrect, Other Clear Aligner Systems. Includes: D, i, g, i, t, a, l,  , t, r, e, a, t, m, e, n, t,  , p, l, a, n, n, i, n, g,  , a, n, d,  , m, o, n, i, t, o, r, i, n, g.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "orthodontics",
+        "service_name": "Clear Aligners",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Emergency Dental Care. Description: Immediate care for dental emergencies. Types/Options: Severe Pain Relief, Swelling Treatment, Tooth Repair, Infection Management, Trauma Care.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "emergency",
+        "service_name": "Emergency Dental Care",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Same-Day Emergency Treatment. Description: Prompt care for urgent dental issues. Types/Options: Knocked-out Tooth, Loose Tooth, Lost Crown/Filling, Broken Dentures, Severe Toothache.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "emergency",
+        "service_name": "Same-Day Emergency Treatment",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Root Canal Therapy. Description: Treatment of tooth pulp and root issues. Types/Options: Standard Root Canal, Retreatment, Apicoectomy, Pulp Capping.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "specialty",
+        "service_name": "Root Canal Therapy",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Gum Disease Treatment. Description: Treatment of gum disease and related issues. Types/Options: Deep Cleaning, Gum Surgery, Bone Grafting, Gum Grafting, Laser Therapy.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "specialty",
+        "service_name": "Gum Disease Treatment",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Oral Surgery. Description: Surgical procedures for complex dental issues. Types/Options: Tooth Extraction, Wisdom Teeth Removal, Dental Implants, Bone Grafting, Jaw Surgery.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "specialty",
+        "service_name": "Oral Surgery",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Dental Implants. Description: Permanent tooth replacement solutions. Types/Options: Single Tooth Implants, Multiple Tooth Implants, All-on-4 Implants, Implant-Supported Dentures.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "specialty",
+        "service_name": "Dental Implants",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Sleep Dentistry. Description: Treatment for sleep-related dental issues. Types/Options: Sleep Apnea Treatment, Snoring Appliances, TMJ Treatment, Night Guards.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "additional",
+        "service_name": "Sleep Dentistry",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Service offered: Sedation Dentistry. Description: Various levels of sedation for anxious patients. Types/Options: Nitrous Oxide, Oral Sedation, IV Sedation, General Anesthesia.",
+      "metadata": {
+        "type": "detailed_service",
+        "category": "additional",
+        "service_name": "Sedation Dentistry",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Rate limiting policy: If multiple calls are made in a short time (3 calls), your number might be temporarily blocked for 30 minutes. Message: 'We've noticed multiple calls in a short time. To ensure fair access, your number is temporarily blocked for 30 minutes. Please try again later.'.",
+      "metadata": {
+        "type": "policy",
+        "subtype": "rate_limiting_calls",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Appointment request limit: You are allowed 5 appointment requests per day. Message: 'You've reached the daily limit of 5 appointment requests. Please try again tomorrow or contact the office for further assistance.'.",
+      "metadata": {
+        "type": "policy",
+        "subtype": "rate_limiting_appointments",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Reschedule request limit: You can reschedule an appointment 1 time per day. Message: 'You've already rescheduled an appointment today. To maintain fairness, rescheduling is limited to once per day. Please try again tomorrow.'.",
+      "metadata": {
+        "type": "policy",
+        "subtype": "rate_limiting_reschedule",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "If the virtual assistant cannot help, the frustrating user call ending message is: 'It seems like your requests are outside my expertise. I'm here to assist with dental-related inquiries. If you need help with appointments or services, feel free to ask. Otherwise, I'll need to end this call now. Have a great day!'.",
+      "metadata": {
+        "type": "conversational_flow",
+        "subtype": "frustrating_user_message",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "If a session is inactive for 30 seconds, the call ending message is: 'It looks like you're away. I'll go ahead and end this call now. If you need any assistance, feel free to call back. Have a great day!'.",
+      "metadata": {
+        "type": "conversational_flow",
+        "subtype": "inactive_session_message",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Prohibited topics for discussion by the virtual assistant include: medical_advice, diagnosis, treatment_recommendations, medication_advice, personal_health_information. It will not provide medical advice, diagnosis, treatment recommendations, medication advice, or discuss personal health information.",
+      "metadata": {
+        "type": "guardrail",
+        "subtype": "prohibited_topics",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Sensitive information handling policy: PII (Personally Identifiable Information) handling is 'never_store' and health information handling is 'minimal_necessary'.",
+      "metadata": {
+        "type": "guardrail",
+        "subtype": "sensitive_info_handling",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Emergency situations such as severe pain, bleeding, swelling, accident, trauma will trigger an emergency response. The message given is: 'This sounds like an emergency situation. Please call our emergency line at {emergency_number} immediately. If this is a life-threatening emergency, please call 911 or go to the nearest emergency room.'. Immediate transfer is True.",
+      "metadata": {
+        "type": "guardrail",
+        "subtype": "emergency_response",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Compliance details: HIPAA compliance is True. Data retention is 'minimum_necessary'. Consent is True.",
+      "metadata": {
+        "type": "guardrail",
+        "subtype": "compliance",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Operating Hours Handling:': - Check practice hours before scheduling",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Operating Hours Handling:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Operating Hours Handling:': - Provide next-day options for after-hours calls",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Operating Hours Handling:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Operating Hours Handling:': - Clearly communicate holiday schedules",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Operating Hours Handling:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Patient Communication:': - Use simple, clear language",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Patient Communication:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Patient Communication:': - Avoid medical jargon when possible",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Patient Communication:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Patient Communication:': - Repeat important information for clarity",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Patient Communication:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Appointment Management:': - Confirm all appointment details",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Appointment Management:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Appointment Management:': - Explain preparation requirements",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Appointment Management:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Appointment Management:': - Send follow-up confirmations",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Appointment Management:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Emergency Protocols:': - Quickly identify emergency situations",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Emergency Protocols:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Emergency Protocols:': - Provide immediate emergency contact numbers",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Emergency Protocols:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Emergency Protocols:': - Document all emergency-related communications",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Emergency Protocols:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Special Considerations:': - Accommodate accessibility needs",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Special Considerations:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Special Considerations:': - Note patient preferences",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Special Considerations:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Additional Instruction under 'Special Considerations:': - Handle language barriers appropriately",
+      "metadata": {
+        "type": "additional_instruction",
+        "category": "Special Considerations:",
+        "practice_name": "Roman Burke",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Specific practice details for Avondale Smiles: Located at 11523 Avondale Road NE #115, Redmond WA 98052. Time zone: America/Los_Angeles.",
+      "metadata": {
+        "type": "specific_practice_details",
+        "practice_id": 1,
+        "practice_name": "Avondale Smiles",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Provider at Avondale Smiles: Mr. John is a Doctor (Male). Available on: Monday, Tuesday, Wednesday, Thursday, Friday.",
+      "metadata": {
+        "type": "provider_info",
+        "provider_id": "2",
+        "practice_id": 1,
+        "practice_name": "Avondale Smiles",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Provider at Avondale Smiles: Dr. Doe is a Doctor (Male). Available on: Monday, Tuesday, Wednesday, Thursday, Friday.",
+      "metadata": {
+        "type": "provider_info",
+        "provider_id": "1",
+        "practice_id": 1,
+        "practice_name": "Avondale Smiles",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Visit type at Avondale Smiles: 'Dental Crowns (1 doc)'. Duration: 60 minutes. It's allowed for new patients and allowed for returning patients. It requires provider selection.",
+      "metadata": {
+        "type": "practice_visit_type",
+        "visit_type_id": "1",
+        "practice_id": 1,
+        "practice_name": "Avondale Smiles",
+        "visit_type_name": "Dental Crowns (1 doc)",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Visit type at Avondale Smiles: 'Teeth Whitening (1 doc, no selection)'. Duration: 60 minutes. It's allowed for new patients and allowed for returning patients. It provider selection not required.",
+      "metadata": {
+        "type": "practice_visit_type",
+        "visit_type_id": "2",
+        "practice_id": 1,
+        "practice_name": "Avondale Smiles",
+        "visit_type_name": "Teeth Whitening (1 doc, no selection)",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Visit type at Avondale Smiles: 'Dental Implants (multiple, selection allowed)'. Duration: 60 minutes. It's allowed for new patients and allowed for returning patients. It requires provider selection.",
+      "metadata": {
+        "type": "practice_visit_type",
+        "visit_type_id": "3",
+        "practice_id": 1,
+        "practice_name": "Avondale Smiles",
+        "visit_type_name": "Dental Implants (multiple, selection allowed)",
+        "organization_id": 1
+      }
+    },
+    {
+      "text": "Visit type at Avondale Smiles: 'Dental Emergency (multiple doc, no selection)'. Duration: 60 minutes. It's allowed for new patients and allowed for returning patients. It provider selection not required.",
+      "metadata": {
+        "type": "practice_visit_type",
+        "visit_type_id": "4",
+        "practice_id": 1,
+        "practice_name": "Avondale Smiles",
+        "visit_type_name": "Dental Emergency (multiple doc, no selection)",
+        "organization_id": 1
+      }
+    }
+  ]
+}
